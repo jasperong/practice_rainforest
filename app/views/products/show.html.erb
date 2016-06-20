@@ -1,0 +1,10 @@
+<h1><%= @product.name %></h1>
+
+<div class="product">
+  <%= image_tag @image.url %><br>
+  <%= @product.formatted_price %>
+  <%= @product.description %><br>
+</div>
+
+<%= link_to "Edit Product", edit_product_path %><br>
+<%= link_to "Delete Product", @product, method: :delete, data: {confirm: "Are you sure?"} %>
