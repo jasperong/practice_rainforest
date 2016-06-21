@@ -6,7 +6,7 @@
   <%= @product.description %><br>
 </div>
 <%= link_to "Back", products_path %><br>
-<%= link_to "Edit Product", edit_product_path %><br>
+<%= link_to "Edit Product", edit_product_path(@product) %><br>
 <%= link_to "Delete Product", @product, method: :delete, data: {confirm: "Are you sure?"} %>
 
 <h3>Reviews</h3>
