@@ -13,6 +13,13 @@
  *= require_tree .
  *= require_self
  */
-body {
-  background: rgb(209, 219, 208)
+
+@import "bootstrap";
+@import "bootstrap-sprockets";
+
+body, .container {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  background-color: rgb(233, 233, 233)
 }
