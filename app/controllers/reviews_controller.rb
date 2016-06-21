@@ -14,13 +14,16 @@ class ReviewsController < ApplicationController
       flash[:notice] = "Review created successfully"
       redirect_to product_path(@product)
     else
+      # flash[:alert] = "Please write something"
       render 'products/show'
+      # redirect_to product_path(@product)
     end
   end
 
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
+    redirect_to product_path(@product)
   end
 
   private

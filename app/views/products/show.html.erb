@@ -19,7 +19,10 @@
      <br>
      <% if review.user != nil %>
        <em> by <%= review.user.username %></em><br>
-       Added on: <%= review.created_at %>
+       Added on: <%= review.created_at %><br>
+       <% if review.id != nil %>
+       <%= link_to "Delete review", product_review_url(@product, review), method: :delete, data: {confirm: "Are you sure?"} %>
+       <% end %>
      <% end %>
    </p>
  <% end %>
